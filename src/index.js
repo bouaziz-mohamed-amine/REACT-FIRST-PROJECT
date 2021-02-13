@@ -27,6 +27,8 @@ ReactDOM.render(
  */
 
 //part 2 Rendering Elements
+
+/*
 function tick() {
   const element = (
       <div>
@@ -34,7 +36,27 @@ function tick() {
         <h2>It is {new Date().toLocaleTimeString()}.</h2>
       </div>
   );
-  ReactDOM.render(element, document.getElementById('roooot'));
+  ReactDOM.render(element, document.getElementById('root'));
 }
 setInterval(tick, 1000);
+ */
 
+//part 3    component
+
+/*
+function Welcome(props) {
+    return <h1>Hello, {props}</h1>;
+}
+ReactDOM.render(Welcome("Bouaziz"), document.getElementById('root'));
+ */
+
+class Welcome extends React.Component {
+    render() {
+        return <h1>Hello , {this.props.name}</h1>;
+    }
+}
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+    element,
+    document.getElementById('root')
+);

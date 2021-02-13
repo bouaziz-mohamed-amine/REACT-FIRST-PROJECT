@@ -50,13 +50,34 @@ function Welcome(props) {
 ReactDOM.render(Welcome("Bouaziz"), document.getElementById('root'));
  */
 
+/*
 class Welcome extends React.Component {
     render() {
-        return <h1>Hello , {this.props.name}</h1>;
+        return <h1>Hello , {this.props.amine}</h1>;
     }
 }
-const element = <Welcome name="Sara" />;
+const element = <Welcome amine="Sara" />;
 ReactDOM.render(
     element,
+    document.getElementById('root')
+);
+ */
+function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+}
+
+function App() {
+    return (
+        <div>
+            <Welcome name="BO3" />
+            <Welcome name="MiMi" />
+            <Welcome name="Mariem" />
+            <Welcome name="NouNou" />
+        </div>
+    );
+}
+
+ReactDOM.render(
+    <App />,
     document.getElementById('root')
 );

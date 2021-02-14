@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// part 1    introducing jsx
+import './component/index'
+import Button1 from './component/index';
+import './App'
+
+
+                                                   // part 1    introducing jsx
 
 /*
-function formatName(user) {
-    return user.firstName + ' ' + user.lastName;
-  }
   const user = {
     firstName: 'Kylian',
     lastName: 'Mbappé',
     avatar : "https://www.clicavenue.com/wp-content/uploads/2020/04/arbre.jpg",
   };
+
+function formatName(user) {
+    return user.firstName + ' ' + user.lastName;
+  }
+
+
   //const element = (<h1> HELLO, {formatName(user)} !</h1>);
     const  element= (<div>
       <img src={user.avatar} alt="title"/>
@@ -26,7 +34,7 @@ ReactDOM.render(
 );
  */
 
-//part 2 Rendering Elements
+                                                              //part 2 Rendering Elements
 
 /*
 function tick() {
@@ -41,7 +49,9 @@ function tick() {
 setInterval(tick, 1000);
  */
 
-//part 3    component
+
+
+                                                                        //part 3    component
 
 /*
 function Welcome(props) {
@@ -62,7 +72,7 @@ ReactDOM.render(
     document.getElementById('root')
 );
  */
-function Welcome(props) {
+/*function Welcome(props) {
     return <h1>Hello, {props.name}</h1>;
 }
 
@@ -78,6 +88,13 @@ function App() {
 }
 
 ReactDOM.render(
-    <App />,
+    //<App />,
+    <Button/>,
     document.getElementById('root')
 );
+*/
+
+const element = <Button1/>;
+ReactDOM.render(
+    <Button1/>,
+    document.getElementById('root'));

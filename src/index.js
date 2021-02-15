@@ -53,11 +53,13 @@ setInterval(tick, 1000);
 
                                                                         //part 3    component
 
-/*
-function Welcome(props) {
-    return <h1>Hello, {props}</h1>;
+
+/**
+ * function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
 }
-ReactDOM.render(Welcome("Bouaziz"), document.getElementById('root'));
+ReactDOM.render(<Welcome  name="amine"/>,document.getElementById('root'));
+
  */
 
 /*
@@ -93,8 +95,66 @@ ReactDOM.render(
     document.getElementById('root')
 );
 */
-
-const element = <Button1/>;
+/**
+  * const element = <Button1 name="amine"   / >;
 ReactDOM.render(
-    <Button1/>,
-    document.getElementById('root'));
+    element,
+    document.getElementById('root')); 
+ */
+
+const comment = {
+  date: new Date(),
+  text: 'I hope you enjoy learning React!',
+  amine: {
+    name: 'Hello Kitty',
+    avatarUrl: 'https://placekitten.com/g/64/64',
+  },
+}; 
+
+function formatDate(date) {
+  return date.toLocaleDateString();
+}
+
+function Avatar(props) {
+    return (
+      <img
+        className="Avatar"
+        src={props.user.avatarUrl}
+        alt={props.user.name}
+      />
+    );
+  }
+
+function UserInfo(props) {
+    return (
+      <div className="UserInfo">
+        <Avatar user={props.user} />
+        <div className="UserInfo-name">{props.user.name}</div>
+      </div>
+    );
+  }
+  
+  function Comment(props) {
+    return (
+      <div className="Comment">
+        <UserInfo user={props.author} />
+        <div className="Comment-text">{props.text}</div>
+        <div className="Comment-date">
+          {formatDate(props.date)}
+        </div>
+      </div>
+    );
+  }
+  
+  ReactDOM.render(
+    <Comment
+      date={comment.date}
+      text={comment.text}
+      author={comment.amine}
+    />,
+    document.getElementById('root')
+  );
+
+
+      
+  

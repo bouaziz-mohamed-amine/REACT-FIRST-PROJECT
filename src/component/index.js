@@ -5,7 +5,8 @@ class Button1 extends Component {
     render() { 
         return ( <div>
             <p className="App ">bouaziz</p>
-            <p>Mohamed Amine</p>
+            <p>{this.props.name}</p>
+            <a href="#">bouaziz</a>
         </div> );
     }
 }

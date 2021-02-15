@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
+import ButtonC from './Buttoncomponent';
+import Title from './titlecomponent';
 
-class Button1 extends Component {
-    state = {  }
+class Componentprops extends Component {
+    
+    getButton = (props) => alert(props);
+
     render() { 
-        return ( <div>
-            <p className="App ">bouaziz</p>
-            <p>{this.props.name}</p>
-            <a href="#">bouaziz</a>
-        </div> );
+        return (  
+            <React.Fragment>
+                <Title/>
+                <ButtonC name="Mohamed amine" btncolor="blue" textcolor="white" onButtonClick={this.getButton} />
+                <ButtonC name="bouaziz"btncolor="green" textcolor="white" onButtonClick={this.getButton} />
+                <ButtonC name="bouaziz" btncolor="aquamarine" textcolor="grey" icon="+" onButtonClick={this.getButton} />
+            </React.Fragment>
+        );
     }
 }
  
-export default Button1;
+export default Componentprops;
+

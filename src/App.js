@@ -1,18 +1,16 @@
 
 import React, { Component } from 'react';
-import Componentprops from './component';
-import ButtonC from './component/Buttoncomponent';
-import Title from './component/titlecomponent';
+import Componentprops from './component/component_and_props/component';
+
 
 class APP extends Component {
-  state = {  amine: "bouaziz"}
   
-  
+
   render() { 
-    return ( <React.Fragment>
-      
-      <Componentprops/>
+    return ( 
+    <React.Fragment>
     
+        <Componentprops/>
     </React.Fragment> );
   }
 }

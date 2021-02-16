@@ -5,7 +5,7 @@ export default class Title extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                <h1>Title for my new app react with najem</h1>
+                <h1>LEARN REACT with Najem</h1>
             </React.Fragment>
          );
     }

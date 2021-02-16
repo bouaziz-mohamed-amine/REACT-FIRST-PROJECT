@@ -11,12 +11,12 @@ class Componentprops extends Component {
 
     render() { 
         return (  
-        <React.Fragment>
+        <div>
             <Title/>
             <ButtonC name="Mohamed amine" btncolor="blue" textcolor="white" onButtonClick={this.getButton} />
             <ButtonC name="bouaziz"btncolor="green" textcolor="white" onButtonClick={this.getButton} />
             <ButtonC name="bouaziz" btncolor="aquamarine" textcolor="grey" icon="+" onButtonClick={this.getButton} />
-        </React.Fragment>
+            </div>
         );
     }
 }

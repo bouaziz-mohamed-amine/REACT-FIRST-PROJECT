@@ -5,7 +5,7 @@ export default class Title extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                <h1>LEARN REACT with Najem</h1>
+                <h1>LEARN REACT with {this.props.name}</h1>
             </React.Fragment>
          );
     }

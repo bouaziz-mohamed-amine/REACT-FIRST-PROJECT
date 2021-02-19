@@ -7,11 +7,13 @@ import  './component/4_conditional_rendering/conditional'
 
 import Event from './component/3_eventhandle/event';
 import Conditional from './component/4_conditional_rendering/conditional';
+import './component/5_lists_keys/list_event.js'
+import Key_List from './component/5_lists_keys/list_event.js';
 
 
 class APP extends Component {
   
-
+  
   render() { 
     return ( 
     <React.Fragment>
@@ -22,7 +24,9 @@ class APP extends Component {
         <hr style={{width:'80%',height:"2px",backgroundColor:"black",marginLeft:"auto",marginRight:'auto'}}></hr>
         <Event />
         <hr style={{width:'80%',height:"2px",backgroundColor:"black",marginLeft:"auto",marginRight:'auto'}}></hr>
-        <Conditional />
+        <Conditional text="visivle" />
+        <hr style={{width:'80%',height:"2px",backgroundColor:"black",marginLeft:"auto",marginRight:'auto'}}></hr>
+        <Key_List/>   
     </React.Fragment> );
   }
 }

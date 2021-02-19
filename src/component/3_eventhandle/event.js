@@ -20,7 +20,7 @@ class Event extends Component {
    
 
     render() { 
-        return ( <React.Fragment>
+        return ( <div>
                 
                 <h1>{this.state.isToggleOn? this.state.title1:this.state.title2}</h1>   
                 <button  onClick={this.handleclick} >change {this.state.isToggleOn? 'on' : "off"}</button>
@@ -32,7 +32,7 @@ class Event extends Component {
                 </div>
                 <p>{this.state.text}{this.state.contain}</p>
         
-        </React.Fragment> );
+        </div> );
     }
 }
  

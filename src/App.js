@@ -9,10 +9,21 @@ import Event from './component/3_eventhandle/event';
 import Conditional from './component/4_conditional_rendering/conditional';
 import './component/5_lists_keys/list_event.js'
 import Key_List from './component/5_lists_keys/list_event.js';
+import Form from './component/6_form/form';
 
 
 class APP extends Component {
-  
+
+  constructor(props) {
+    super(props);
+    this.state = { 
+        books : [
+            {id : 1,  title:'the prince',author:'najem',price:20},
+            {id : 2,title:'the king',author:'amine',price:50},
+            {id : 3, title:'learn react',author:'mark',price:1000,}
+        ]
+     }
+}
   
   render() { 
     return ( 
@@ -27,6 +38,9 @@ class APP extends Component {
         <Conditional text="visivle" />
         <hr style={{width:'80%',height:"2px",backgroundColor:"black",marginLeft:"auto",marginRight:'auto'}}></hr>
         <Key_List/>   
+        <hr style={{width:'80%',height:"2px",backgroundColor:"black",marginLeft:"auto",marginRight:'auto'}}></hr>
+        <Form books={this.state.books}  />
+        <hr style={{width:'80%',height:"2px",backgroundColor:"black",marginLeft:"auto",marginRight:'auto'}}></hr>
     </React.Fragment> );
   }
 }

@@ -10,6 +10,7 @@ import Conditional from './component/4_conditional_rendering/conditional';
 import './component/5_lists_keys/list_event.js'
 import Key_List from './component/5_lists_keys/list_event.js';
 import Form from './component/6_form/form';
+import Lifting from './component/7_lifting/lifting';
 
 
 class APP extends Component {
@@ -41,6 +42,7 @@ class APP extends Component {
         <hr style={{width:'80%',height:"2px",backgroundColor:"black",marginLeft:"auto",marginRight:'auto'}}></hr>
         <Form books={this.state.books}  />
         <hr style={{width:'80%',height:"2px",backgroundColor:"black",marginLeft:"auto",marginRight:'auto'}}></hr>
+        <Lifting/>
     </React.Fragment> );
   }
 }

@@ -11,6 +11,7 @@ import './component/5_lists_keys/list_event.js'
 import Key_List from './component/5_lists_keys/list_event.js';
 import Form from './component/6_form/form';
 import Lifting from './component/7_lifting/lifting';
+import Composition from './component/8_composition/composition';
 
 
 class APP extends Component {
@@ -43,6 +44,8 @@ class APP extends Component {
         <Form books={this.state.books}  />
         <hr style={{width:'80%',height:"2px",backgroundColor:"black",marginLeft:"auto",marginRight:'auto'}}></hr>
         <Lifting/>
+        <hr style={{width:'80%',height:"2px",backgroundColor:"black",marginLeft:"auto",marginRight:'auto'}}></hr>
+        <Composition/>
     </React.Fragment> );
   }
 }
